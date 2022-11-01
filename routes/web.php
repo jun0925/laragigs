@@ -14,21 +14,8 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/greeting', function () {
-    return response('<h1>Hello World</h1>', 200)
-        ->header('Content-Type', 'text/plain')
-        ->header('foo', 'bar');
-});
-
-Route::get('/posts/{id}', function($id) {
-    ddd($id);
-    return response('Post '. $id);
-})->where('id', '[0-9]+');
-
-Route::get('/search', function(Request $request) {
-    dd($request->name. ' ' . $request->city);
+Route::get('/listings', function () {
+    return view('listings', [
+        'heading' => 'Latest Listings'
+    ]);
 });
