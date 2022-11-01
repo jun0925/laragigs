@@ -16,6 +16,18 @@ use Illuminate\Http\Request;
 
 Route::get('/listings', function () {
     return view('listings', [
-        'heading' => 'Latest Listings'
+        'heading' => 'Latest Listings',
+        'listings' => [
+            [
+                'id' => 1,
+                'title' => 'Listing One',
+                'description' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim amet deserunt molestiae culpa ipsum? Harum, ipsum commodi labore omnis voluptatum numquam inventore quod, vero ducimus esse reiciendis error corporis expedita?'
+            ],
+            [
+                'id' => 2,
+                'title' => 'Listing Two',
+                'description' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim amet deserunt molestiae culpa ipsum? Harum, ipsum commodi labore omnis voluptatum numquam inventore quod, vero ducimus esse reiciendis error corporis expedita?'
+            ],
+        ],
     ]);
 });
