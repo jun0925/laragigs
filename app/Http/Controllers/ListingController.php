@@ -8,7 +8,7 @@ use App\Models\Listing;
 class ListingController extends Controller
 {
     // Show all listings
-    public function index(Listing $listing)
+    public function index()
     {
         return view('listings.index', [
             'listings' => Listing::all(),
