@@ -21,3 +21,11 @@ Route::get('/', [ListingController::class, 'index']);
 
 // Single Listing
 Route::get('listings/{listing}', [ListingController::class, 'show']);
+
+// Common Resource Routes:
+// index - Show all listings
+// show - Show single listing
+// create - Show form to create new listing
+// store - Store new listing
+// update - Update listing
+// destroy - Delete lisintg
